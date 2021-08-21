@@ -13,6 +13,9 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		809CC1559C74BEDD15A890C8 /* libPods-rnSwiftuiProxy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C10AA5CA72C92684D980EE85 /* libPods-rnSwiftuiProxy.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		BCF7D15126D018A300A9076C /* SwiftUIButtonProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF7D15026D018A300A9076C /* SwiftUIButtonProxy.swift */; };
+		BCF7D15526D0198800A9076C /* SwiftUIButtonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF7D15426D0198800A9076C /* SwiftUIButtonManager.m */; };
+		BCF7D1B326D0DF7F00A9076C /* SwiftUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF7D1B226D0DF7F00A9076C /* SwiftUIButton.swift */; };
 		CAE90A97563180D87C029CE7 /* libPods-rnSwiftuiProxy-rnSwiftuiProxyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B491A0D9E8064E9A96764D2E /* libPods-rnSwiftuiProxy-rnSwiftuiProxyTests.a */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +44,10 @@
 		6CEA51E3FF3471FEAE0439F4 /* Pods-rnSwiftuiProxy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnSwiftuiProxy.release.xcconfig"; path = "Target Support Files/Pods-rnSwiftuiProxy/Pods-rnSwiftuiProxy.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = rnSwiftuiProxy/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B491A0D9E8064E9A96764D2E /* libPods-rnSwiftuiProxy-rnSwiftuiProxyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rnSwiftuiProxy-rnSwiftuiProxyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCF7D14F26D018A200A9076C /* rnSwiftuiProxy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rnSwiftuiProxy-Bridging-Header.h"; sourceTree = "<group>"; };
+		BCF7D15026D018A300A9076C /* SwiftUIButtonProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIButtonProxy.swift; sourceTree = "<group>"; };
+		BCF7D15426D0198800A9076C /* SwiftUIButtonManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftUIButtonManager.m; sourceTree = "<group>"; };
+		BCF7D1B226D0DF7F00A9076C /* SwiftUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIButton.swift; sourceTree = "<group>"; };
 		C10AA5CA72C92684D980EE85 /* libPods-rnSwiftuiProxy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rnSwiftuiProxy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E60A9E5C4F57EA2BEF60F688 /* Pods-rnSwiftuiProxy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnSwiftuiProxy.debug.xcconfig"; path = "Target Support Files/Pods-rnSwiftuiProxy/Pods-rnSwiftuiProxy.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -92,6 +99,10 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				BCF7D15026D018A300A9076C /* SwiftUIButtonProxy.swift */,
+				BCF7D14F26D018A200A9076C /* rnSwiftuiProxy-Bridging-Header.h */,
+				BCF7D15426D0198800A9076C /* SwiftUIButtonManager.m */,
+				BCF7D1B226D0DF7F00A9076C /* SwiftUIButton.swift */,
 			);
 			name = rnSwiftuiProxy;
 			sourceTree = "<group>";
@@ -145,7 +156,6 @@
 				1BB2592643CB623FDC97D4E2 /* Pods-rnSwiftuiProxy-rnSwiftuiProxyTests.debug.xcconfig */,
 				2FDD62926C2FEDD55BF6BB11 /* Pods-rnSwiftuiProxy-rnSwiftuiProxyTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +218,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -411,8 +421,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCF7D1B326D0DF7F00A9076C /* SwiftUIButton.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				BCF7D15126D018A300A9076C /* SwiftUIButtonProxy.swift in Sources */,
+				BCF7D15526D0198800A9076C /* SwiftUIButtonManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +444,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1BB2592643CB623FDC97D4E2 /* Pods-rnSwiftuiProxy-rnSwiftuiProxyTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -458,6 +472,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2FDD62926C2FEDD55BF6BB11 /* Pods-rnSwiftuiProxy-rnSwiftuiProxyTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = rnSwiftuiProxyTests/Info.plist;
@@ -487,6 +502,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = rnSwiftuiProxy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -498,6 +514,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = rnSwiftuiProxy;
+				SWIFT_OBJC_BRIDGING_HEADER = "rnSwiftuiProxy-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -512,6 +529,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = rnSwiftuiProxy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -523,6 +541,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = rnSwiftuiProxy;
+				SWIFT_OBJC_BRIDGING_HEADER = "rnSwiftuiProxy-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -577,14 +596,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
-					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.2/$(PLATFORM_NAME)\"",
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -635,7 +654,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",

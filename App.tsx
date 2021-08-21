@@ -1,18 +1,36 @@
-import React from 'react';
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import React, {useState} from 'react';
+import {
+  StyleSheet,
+  Text,
+  requireNativeComponent,
+  SafeAreaView,
+} from 'react-native';
+
+const SwiftUIButton = requireNativeComponent('SwiftUIButton');
 
 const App = () => {
+  const [count, updateCount] = useState(0);
+
   return (
-    <SafeAreaView style={styles.container}>
-      <View>
-        <Text>React Native SwiftUi Proxy</Text>
-      </View>
-    </SafeAreaView>
+    <>
+      <SafeAreaView />
+      <Text style={styles.title}>React Native SwiftUI Proxy</Text>
+      <SwiftUIButton
+        style={styles.buttonContainer}
+        count={count}
+        onCountChange={e => updateCount(e.nativeEvent.count)}
+      />
+    </>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
+  title: {
+    fontSize: 30,
+    textAlign: 'center',
+  },
+  buttonContainer: {
+    marginTop: 100,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
